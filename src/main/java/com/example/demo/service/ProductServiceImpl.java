@@ -23,5 +23,10 @@ public class ProductServiceImpl implements ProductService {
 	
 		return prepo.findAll();
 	}
+	
+	@Override
+	public void deleteProduct(Integer pid) {
+	prepo.deleteById(pid);		
+	}
 
 }
