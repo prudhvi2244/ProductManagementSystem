@@ -52,6 +52,7 @@ public class ProductController
 	@DeleteMapping(value = "/{pid}")
 	public ResponseEntity<String> deleteProductById(@PathVariable Integer pid)
 	{
+		pservice.deleteProduct(pid);
 		return new ResponseEntity<String>("Product With ID :"+pid+" Deleted Successfully",HttpStatus.OK);
 	}
 	
